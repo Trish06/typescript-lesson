@@ -1,16 +1,14 @@
-type PinoyFreeCoder = number | string;
-function addOrCombine(data1 : number | string, data2 : number | string) {
-  let result : number | string;
-  if (typeof data1 === 'number' && typeof data2 === 'number'){
-    result = data1 + data2;
-  }else {
-    result = data1.toString() + data2.toString() 
-  }
-  return result;
+function sum(num1 : number, num2 : number) {
+  return num1 + num2;
 }
 
-const combineNumbers = addOrCombine(3, 4);
-console.log(combineNumbers);
+function getResult(num : number) : string {
+  let resultString = (`Result : ${num}`);
+  return resultString;
+}
 
-const combineString = addOrCombine("Pinoy", "FreeCoder");
-console.log(combineString)
+let AddOrGetResult : (num1: number, num2 : number) => number;
+let GetResultFunction: (num: number) => string
+
+AddOrGetResult = sum;
+GetResultFunction = getResult;

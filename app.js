@@ -1,14 +1,11 @@
-function addOrCombine(data1, data2) {
-    var result;
-    if (typeof data1 === 'number' && typeof data2 === 'number') {
-        result = data1 + data2;
-    }
-    else {
-        result = data1.toString() + data2.toString();
-    }
-    return result;
+function sum(num1, num2) {
+    return num1 + num2;
 }
-var combineNumbers = addOrCombine(3, 4);
-console.log(combineNumbers);
-var combineString = addOrCombine("Pinoy", "FreeCoder");
-console.log(combineString);
+function getResult(num) {
+    var resultString = ("Result : ".concat(num));
+    return resultString;
+}
+var AddOrGetResult;
+var GetResultFunction;
+AddOrGetResult = sum;
+GetResultFunction = getResult;
