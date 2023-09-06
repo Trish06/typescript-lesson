@@ -1,15 +1,14 @@
-var Access;
-(function (Access) {
-    Access["ADMIN"] = "123";
-    Access[Access["MODERATOR"] = 345] = "MODERATOR";
-    Access[Access["USER"] = 111] = "USER";
-})(Access || (Access = {}));
-var student = {
-    name: 'Juan',
-    age: 19,
-    interest: ['Basketball', 'Reading'],
-    access: Access.ADMIN
-};
-if (student.access === '123') {
-    console.log('is admin');
+function addOrCombine(data1, data2) {
+    var result;
+    if (typeof data1 === 'number' && typeof data2 === 'number') {
+        result = data1 + data2;
+    }
+    else {
+        result = data1.toString() + data2.toString();
+    }
+    return result;
 }
+var combineNumbers = addOrCombine(3, 4);
+console.log(combineNumbers);
+var combineString = addOrCombine("Pinoy", "FreeCoder");
+console.log(combineString);
