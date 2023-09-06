@@ -1,18 +1,25 @@
-let userData: unknown;
-let trueData: string
-
-userData = 'now'
-userData = 5
-if(typeof userData === "string") {
-  trueData = userData
+interface ModelType {
+  type: string,
+  color: string,
+  event : ()=> void;
 }
 
-function generateErrorCode(description : string, errorCode : number) : never{
-  throw {message : description, code : errorCode}
+class Vehicle {
+  modelType : ModelType
+
+  constructor(model: ModelType ) {
+    this.modelType = model;
+  }
 }
 
-function infiniteLoop(): never {
-  while(true){}
+let model_type = {
+  type : 'Car',
+  color : 'Blue',
+  event : () => {
+    console.log('Event Function')
+  }
 }
-generateErrorCode("Error happened", 502);
-infiniteLoop();
+
+const car = new Vehicle(model_type);
+
+console.log(car)

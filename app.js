@@ -1,11 +1,15 @@
-var userData;
-var trueData;
-userData = 'now';
-userData = 5;
-if (typeof userData === "string") {
-    trueData = userData;
-}
-function generateErrorCode(description, errorCode) {
-    throw { message: description, code: errorCode };
-}
-generateErrorCode("Error happened", 502);
+var Vehicle = /** @class */ (function () {
+    function Vehicle(model) {
+        this.modelType = model;
+    }
+    return Vehicle;
+}());
+var model_type = {
+    type: 'Car',
+    color: 'Blue',
+    event: function () {
+        console.log('Event Function');
+    }
+};
+var car = new Vehicle(model_type);
+console.log(car);
