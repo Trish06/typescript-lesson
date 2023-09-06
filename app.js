@@ -1,11 +1,11 @@
-function sum(num1, num2) {
-    return num1 + num2;
+var userData;
+var trueData;
+userData = 'now';
+userData = 5;
+if (typeof userData === "string") {
+    trueData = userData;
 }
-function getResult(num) {
-    var resultString = ("Result : ".concat(num));
-    return resultString;
+function generateErrorCode(description, errorCode) {
+    throw { message: description, code: errorCode };
 }
-var AddOrGetResult;
-var GetResultFunction;
-AddOrGetResult = sum;
-GetResultFunction = getResult;
+generateErrorCode("Error happened", 502);
