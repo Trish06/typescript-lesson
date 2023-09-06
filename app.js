@@ -1,14 +1,15 @@
-function addFunction(num1, num2, showResult, message) {
-    var result = num1 + num2;
-    if (showResult) {
-        console.log(message + result);
-    }
-    else {
-        console.log("show result is false");
-    }
+var Access;
+(function (Access) {
+    Access["ADMIN"] = "123";
+    Access[Access["MODERATOR"] = 345] = "MODERATOR";
+    Access[Access["USER"] = 111] = "USER";
+})(Access || (Access = {}));
+var student = {
+    name: 'Juan',
+    age: 19,
+    interest: ['Basketball', 'Reading'],
+    access: Access.ADMIN
+};
+if (student.access === '123') {
+    console.log('is admin');
 }
-var number1 = 5;
-var number2 = 2.4;
-var showResult = true;
-var message = 'Sum is :';
-addFunction(number1, number2, showResult, message);
